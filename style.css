@@ -13,16 +13,22 @@ h1 {
 	text-align: center;
 }
 
+p {
+	margin: 0;
+}
+
 .tym {
 	display: flex;
+	flex-direction: column;
 	width: 100%;
 }
 
 .osoba {
 	border: 1px solid gray;
 	width: calc(100% - 30px);
-	padding: 30px;
+	padding: 20px 30px;
 	margin: 15px;
+	border-radius: 10px;
 }
 
 img {
@@ -36,4 +42,35 @@ img {
 
 .info {
 	text-align: center;
+}
+
+@media (min-width: 540px) {
+	.tym {
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+	
+	.osoba {
+		width: calc(( 100% / 2) - 40px);
+		display: flex;
+		flex-direction: row;
+		flex-shrink: 0;
+	}
+
+	img {
+		width: 60px;
+		height: 60px;
+	}
+
+	.info {
+		text-align: left;
+	}
+}
+
+@media (min-width: 960px) {
+	.osoba {
+		width: calc(( 100% / 4) - 40px);
+		flex-direction: column;
+	} 
+
 }
